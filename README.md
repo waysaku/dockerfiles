@@ -9,10 +9,10 @@ e.g.) `docker build -t waysaku/digdag-python-dev --no-cache=true .`
 
 
 start container from image  
-`docker run -it -p 8000:8000 -v /Users/yusaku.watanabe/Downloads/:/mnt --name [CONTAINER NAME] [ImageId] bash`
+`docker run -it -p 8000:8000 -v /Users/yusaku.watanabe/Downloads/:/mnt --name [CONTAINER NAME] [ImageId] bash --login`
 
 login current container  
-`docker exec -it [Container Id] /bin/bash`
+`docker exec -it [Container Id] /bin/bash --login`
 
 first time login, apply local environment  
 `$ source .bash_profile`

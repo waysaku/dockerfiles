@@ -10,7 +10,13 @@ RUN echo "${USER}:pass_waysaku" | chpasswd
 
 USER root
 RUN apt-get update
-RUN apt-get install -y vim git sudo gnupg curl
+RUN apt-get install -y vim git sudo gnupg curl locales
+
+RUN locale-gen en_US.UTF-8
+RUN update-locale
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 
 # Install TD toolbelt
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 901F9177AB97ACBE
