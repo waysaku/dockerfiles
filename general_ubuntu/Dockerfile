@@ -10,7 +10,7 @@ RUN echo "${USER}:pass_waysaku" | chpasswd
 
 USER root
 RUN apt-get update
-RUN apt-get install -y vim git sudo gnupg curl locales
+RUN apt-get install -y vim git sudo gnupg curl locales python3.7
 
 RUN locale-gen en_US.UTF-8
 RUN update-locale
